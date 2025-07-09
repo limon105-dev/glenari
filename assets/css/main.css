@@ -348,24 +348,51 @@ button {
 /* section heading css start */
 .section-heading-wrapper {
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .section-heading {
     color: var(--heading-text-color);
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .section-heading-text {
     color: var(--paragraph-text-color);
     padding: 10px 0 0 0;
     max-width: 600px;
+    margin: 0 auto;
 }
 
 .section-btn {
     display: flex;
     justify-content: center;
-    margin: 50px 0 0 0;
+}
+
+.section-btn a {
+    color: var(--paragraph-text-color);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--paragraph-font);
+    line-height: 1;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-btn a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+.section-btn a .icon {
+    display: flex;
+}
+
+.section-btn a:hover .icon svg path {
+    fill: var(--hover-color);
 }
 
 .section-bg {
@@ -418,7 +445,7 @@ button {
     width: 50px;
     height: 50px;
     border: 1px solid var(--border-color3);
-    color: var(--btn-bg);
+    color: var(--paragraph-text-color);
     background-color: var(--btn-color);
     transition: ease .3s;
     border-radius: 50px;
@@ -432,12 +459,13 @@ button {
 .swiper-button-next:hover {
     color: var(--btn-color);
     background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
     font-size: 20px;
-    color: var(--btn-bg);
+    color: var(--paragraph-text-color);
 }
 
 .swiper-button-prev:hover::after,
@@ -1725,8 +1753,11 @@ button {
     width: 100%;
 }
 
+.sidebar-icons .nav-icons.mabile-nav-icons li a,
 .megamenu-items .nav-icons.mabile-nav-icons li a {
     border: 1px solid var(--black);
+    width: 35px;
+    height: 35px;
 }
 
 .sidebar-icons {
@@ -2155,10 +2186,6 @@ a.footer-mail {
 @media only screen and (max-width: 992px) {
 
     /* common css start */
-    .section-btn {
-        margin: 35px 0 0 0;
-    }
-
     .section {
         padding: 60px 0;
     }
@@ -2292,10 +2319,6 @@ a.footer-mail {
 
     .section {
         padding: 50px 0;
-    }
-
-    .section-btn {
-        margin: 25px 0 0 0;
     }
 
     .section-heading-wrapper {
@@ -2435,6 +2458,16 @@ a.footer-mail {
 
     .section-heading-wrapper {
         margin-bottom: 20px;
+    }
+
+    .section-btn a {
+        font-size: 14px;
+        gap: 8px;
+        font-weight: 500;
+    }
+
+    .section-btn a .icon svg {
+        height: 10px;
     }
 
     /* pagination css start */

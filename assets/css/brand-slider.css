@@ -1,0 +1,55 @@
+.brand-section {
+    padding: 50px 0;
+}
+
+.brand-section .marquee-slider {
+    position: relative;
+}
+
+.brand-section .marquee-slider::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 70px;
+    background: linear-gradient(90deg, rgba(255, 247, 237, 0) 0%, #FFF7ED 100%);
+    transform: rotate(180deg);
+}
+
+.brand-section .marquee-slider::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 70px;
+    background: linear-gradient(90deg, rgba(255, 247, 237, 0) 0%, #FFF7ED 100%);
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* brand-slider section css start */
+    .brand-section {
+        padding: 30px 0;
+        background-color: var(--section-bg);
+    }
+
+    /* brand-slider section css end */
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* brand-slider section css start */
+    .brand-section .marquee-content-item-img {
+        height: 25px;
+    }
+
+    .brand-section {
+        padding: 30px 0;
+    }
+
+    /* brand-slider section css end */
+}
