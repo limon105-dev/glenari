@@ -194,6 +194,12 @@ $(function () {
 });
 // btn js ---
 
+// video player js start....
+new VenoBox({
+	selector: '.video-play-btn',
+});
+// video player js end....
+
 // topbar slider js start--
 var swiper = new Swiper(".top-bar-slider", {
 	slidesPerView: 1,
@@ -333,92 +339,114 @@ var swiper = new Swiper(".card-img-slide", {
 });
 // card-img-slider js end--
 
-// product-slider js start---
-var swiper = new Swiper(".product-slider-thumb", {
-	loop: true,
-	spaceBetween: 20,
+// video-sliderr js start--
+var swiper = new Swiper(".video-slider", {
 	slidesPerView: 5,
-	freeMode: true,
-	mousewheel: true,
+	spaceBetween: 20,
+	grabCursor: true,
+	loop: false,
+	centeredSlides: true,
+	on: {
+		setTranslate: function () {
+			const slides = this.slides;
+			for (let i = 0; i < slides.length; i++) {
+				const slide = slides[i];
+				const slideEl = slide;
+				const slideIndex = slideEl.getAttribute("data-swiper-slide-index");
+				slideEl.style.transform = "scale(0.85)";
+				slideEl.style.transition = "transform 0.4s ease";
+			}
+			if (this.slides[this.activeIndex]) {
+				this.slides[this.activeIndex].style.transform = "scale(1.1)";
+			}
+		},
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 	breakpoints: {
-		// when window width is >= 320px
+		// when window width is >= 1px
 		1: {
 			spaceBetween: 10,
-			slidesPerView: 4,
+			slidesPerView: 2,
 		},
-		// when window width is >= 576px
+		// when window width is >= 430px
 		576: {
 			spaceBetween: 20,
-			slidesPerView: 5,
+			slidesPerView: 2.5,
 		},
 		// when window width is >= 767px
 		768: {
+			spaceBetween: 20,
+			slidesPerView: 3.4,
+		},
+		// when window width is >= 767px
+		993: {
 			spaceBetween: 20,
 			slidesPerView: 5,
 		}
 	}
 });
-var swiper2 = new Swiper(".product-slider", {
-	loop: true,
-	autoHeight: true,
-	spaceBetween: 10,
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-	thumbs: {
-		swiper: swiper,
-	},
-});
+// video-slider js end--
+
+// product-slider js start---
+// var swiper = new Swiper(".product-slider-thumb", {
+// 	loop: true,
+// 	spaceBetween: 20,
+// 	slidesPerView: 5,
+// 	freeMode: true,
+// 	mousewheel: true,
+// 	breakpoints: {
+// 		// when window width is >= 320px
+// 		1: {
+// 			spaceBetween: 10,
+// 			slidesPerView: 4,
+// 		},
+// 		// when window width is >= 576px
+// 		576: {
+// 			spaceBetween: 20,
+// 			slidesPerView: 5,
+// 		},
+// 		// when window width is >= 767px
+// 		768: {
+// 			spaceBetween: 20,
+// 			slidesPerView: 5,
+// 		}
+// 	}
+// });
+// var swiper2 = new Swiper(".product-slider", {
+// 	loop: true,
+// 	autoHeight: true,
+// 	spaceBetween: 10,
+// 	navigation: {
+// 		nextEl: ".swiper-button-next",
+// 		prevEl: ".swiper-button-prev",
+// 	},
+// 	thumbs: {
+// 		swiper: swiper,
+// 	},
+// });
 // product-slider js end---
 
 // side-cart-slider js start--
-var swiper = new Swiper(".side-cart-slider", {
-	slidesPerView: 2.2,
-	spaceBetween: 10,
-	grabCursor: true,
-	loop: false,
-	speed: 1000,
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	}
-});
+// var swiper = new Swiper(".side-cart-slider", {
+// 	slidesPerView: 2.2,
+// 	spaceBetween: 10,
+// 	grabCursor: true,
+// 	loop: false,
+// 	speed: 1000,
+// 	pagination: {
+// 		el: ".swiper-pagination",
+// 		clickable: true,
+// 	}
+// });
 // side-cart-slider js end--
 
 // progesss-bar js start--
-const progress = document.querySelector('.progress');
-progress.addEventListener('input', function () {
-	const value = this.value;
-	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
-})
+// const progress = document.querySelector('.progress');
+// progress.addEventListener('input', function () {
+// 	const value = this.value;
+// 	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
+// })
 // progesss-bar js end--
-
-// search page modal js start---
-var body = document.querySelector("body");
-var modal = document.querySelector(".serach-page-wrapper-main");
-var modal_open_btn = document.querySelector(".search-page-open-btn");
-var mobile_modal_open_btn = document.querySelector(".mobile-search-page-open-btn");
-var modal_closeButton = document.querySelector(".search-page-close-btn");
-
-function openModal() {
-	modal.classList.add("show-modal");
-	body.classList.add("active");
-}
-
-function closeModal() {
-	modal.classList.remove("show-modal");
-	body.classList.remove("active");
-}
-
-function windowOnClick(event) {
-	if (event.target === modal) {
-		closeModal();
-	}
-}
-
-modal_open_btn.addEventListener("click", openModal);
-mobile_modal_open_btn.addEventListener("click", openModal);
-modal_closeButton.addEventListener("click", closeModal);
-window.addEventListener("click", windowOnClick);
-// search page modal js end---

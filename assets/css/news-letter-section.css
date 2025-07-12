@@ -1,0 +1,128 @@
+/* news-letter section css start */
+.news-letter-section {
+    background-color: var(--black);
+    padding: 75px 0;
+}
+
+.news-letter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 80px;
+}
+
+.news-letter-heading-area {
+    max-width: 550px;
+}
+
+.news-letter-heading-area .news-letter-sub-heading {
+    margin: 0 0 16px 0;
+    color: var(--white);
+    font-size: 24px;
+}
+
+.news-letter-heading-area .news-letter-heading {
+    color: var(--white);
+}
+
+.news-letter-input-text {
+    margin: 0 0 16px 0;
+    color: var(--white);
+}
+
+.news-letter-input-text a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.news-letter-input-field {
+    display: flex;
+    border: 1px solid var(--white);
+    height: 50px;
+    width: 100%;
+}
+
+.news-letter-input-field input {
+    color: var(--white);
+    height: 100%;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.news-letter-input-field input::placeholder {
+    color: var(--white);
+}
+
+
+.news-letter-input-field .btn {
+    background-color: var(--white);
+    color: var(--black);
+    height: 100%;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.news-letter-input-field .btn:hover {
+    background-color: var(--brand-color);
+    color: var(--white);
+}
+
+/* news-letter section css end */
+
+@media only screen and (max-width:992px) {
+
+    /* news-letter section css start */
+    .news-letter-wrapper {
+        gap: 30px;
+    }
+
+    /* news-letter section css end */
+}
+
+@media only screen and (max-width:767px) {
+
+    /* news-letter section css start */
+    .news-letter-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    /* news-letter section css end */
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* news-letter section css start */
+    .news-letter-section {
+        padding: 40px 0;
+    }
+
+    .news-letter-heading-area .news-letter-sub-heading {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+    }
+
+    .news-letter-wrapper {
+        gap: 10px;
+    }
+
+    .news-letter-input-field {
+        height: 40px;
+    }
+
+    .news-letter-input-field input {
+        padding: 0 10px;
+    }
+
+    .news-letter-input-field .btn {
+        padding: 0px 20px;
+    }
+
+    /* news-letter section css end */
+}
