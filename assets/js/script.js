@@ -339,10 +339,10 @@ var swiper = new Swiper(".card-img-slide", {
 });
 // card-img-slider js end--
 
-// video-sliderr js start--
+// video-slider js start--
 var swiper = new Swiper(".video-slider", {
 	slidesPerView: 5,
-	spaceBetween: 20,
+	spaceBetween: 10,
 	loop: true,
 	grabCursor: true,
 	centeredSlides: true,
@@ -352,47 +352,38 @@ var swiper = new Swiper(".video-slider", {
 	},
 	breakpoints: {
 		1: {
-			spaceBetween: 10,
+			spaceBetween: 5,
 			slidesPerView: 2,
 		},
 		576: {
-			spaceBetween: 20,
+			spaceBetween: 10,
 			slidesPerView: 2.5,
 		},
 		768: {
-			spaceBetween: 20,
+			spaceBetween: 10,
 			slidesPerView: 3.4,
 		},
 		993: {
-			spaceBetween: 20,
+			spaceBetween: 10,
 			slidesPerView: 5,
 		}
 	},
-	on: {
-		init: function () {
-			scaleSlides(this);
-		},
-		slideChangeTransitionStart: function () {
-			scaleSlides(this);
-		},
-		setTranslate: function () {
-			scaleSlides(this);
-		}
-	}
+
 });
-
-function scaleSlides(swiper) {
-	swiper.slides.forEach((slide, index) => {
-		slide.style.transition = "transform 0.4s ease";
-		slide.style.transform = "scale(0.85)";
-	});
-
-	const activeSlide = swiper.slides[swiper.activeIndex];
-	if (activeSlide) {
-		activeSlide.style.transform = "scale(1.1)";
-	}
-}
 // video-slider js end--
+
+// testimonial slider js start--
+var swiper = new Swiper(".testimonial-slider", {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	grabCursor: true,
+	loop: true,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+});
+// testimonial slider js end--
 
 // product-slider js start---
 // var swiper = new Swiper(".product-slider-thumb", {

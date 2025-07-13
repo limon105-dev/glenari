@@ -50,6 +50,11 @@
     justify-content: flex-start;
 }
 
+
+.swiper.hero-slider .swiper-pagination .swiper-pagination-bullet {
+    background-color: var(--white);
+}
+
 /*  section css end */
 
 @media only screen and (max-width:767px) {

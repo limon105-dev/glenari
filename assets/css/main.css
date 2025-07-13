@@ -406,7 +406,7 @@ button {
 .swiper-pagination .swiper-pagination-bullet {
     width: 18px;
     height: 3px;
-    background-color: var(--item-bg);
+    background-color: var(--black);
     position: relative;
     opacity: 1;
     overflow: hidden;
