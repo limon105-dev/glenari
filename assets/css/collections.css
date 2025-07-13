@@ -109,7 +109,7 @@
 }
 
 .filter-accordion {
-    height: calc(100% - 60px);
+    height: calc(100% - 100px);
     overflow-y: auto;
     scrollbar-width: thin;
 }
