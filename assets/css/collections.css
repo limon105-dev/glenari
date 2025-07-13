@@ -51,7 +51,7 @@
 
 .filter-select-field {
     position: relative;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color2);
     display: inline-block;
     border-radius: 5px;
 }
@@ -86,12 +86,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0 26px 0;
+    font-family: var(--paragraph-font);
 }
 
 .mobile-filter-heading.filter-sidebar-heading {
     display: none;
     padding: 0 10px 20px 10px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color2);
 }
 
 .filter-close-btn {
@@ -114,7 +115,7 @@
 }
 
 .filter-accordion-item {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color2);
     margin: 0 0 10px 0;
 }
 
@@ -144,6 +145,7 @@
     font-size: 16px;
     font-weight: 600;
     user-select: none;
+    font-family: var(--paragraph-font);
 }
 
 .filter-accordion-item .item-title-wrapper .icon .plus-icon {
@@ -298,33 +300,8 @@
     gap: 30px;
 }
 
-.collection-tags {
-    margin: 0 0 50px 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-}
-
-.collection-tag {
-    display: block;
-    background-color: var(--item-bg);
-    color: var(--paragraph-text-color);
-    font-size: 14px;
-    font-weight: 500;
-    font-family: var(--paragraph-font);
-    line-height: 1;
-    padding: 14px 20px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-
-.collection-tag:hover {
-    text-decoration: underline;
+.collection-content .pagination{
+    margin: 50px 0 0 0;
 }
 
 /* collection section css end */
@@ -433,16 +410,6 @@
 @media only screen and (max-width: 575px) {
 
     /* colection section css start */
-    .collection-tags {
-        margin: 0 0 30px 0;
-        gap: 10px;
-    }
-
-    .collection-tag{
-        padding: 10px 16px;
-        font-weight: 400;
-    }
-
     .product-items {
         grid-template-columns: repeat(2, 1fr);
     }

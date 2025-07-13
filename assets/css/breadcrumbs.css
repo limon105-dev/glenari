@@ -1,6 +1,10 @@
+.collection-breadcrumb-section {
+    padding: 20px 0;
+    background-color: var(--white);
+}
+
 .breadcrumb {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
 }
@@ -13,7 +17,7 @@
 
 .breadcrumb li a,
 .breadcrumb li span {
-    color: var(--white);
+    color: var(--paragraph-text-color);
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
@@ -33,7 +37,7 @@
 }
 
 .breadcrumb li .breadcrumb-icon i {
-    color: var(--white);
+    color: var(--paragraph-text-color);
     font-size: 14px;
 }
 

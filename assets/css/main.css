@@ -83,7 +83,7 @@
     --section-bg: #f3e7e7;
     --section-bg2: #efefef;
     --card-bg: rgba(208, 207, 207, 0.2);
-    --border-color: #F1F1F1;
+    --border-color: rgba(183, 183, 183, 0.5);
     --border-color2: rgba(183, 183, 183, 0.5);
     --border-color3: #000;
     --text-muted: #777777;
@@ -848,11 +848,6 @@ button {
 
 .mobile-menu-btn {
     display: none;
-}
-
-.mobile-menu-btn p {
-    font-size: 12px;
-    font-weight: 500;
 }
 
 .ham-menu {

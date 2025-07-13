@@ -90,21 +90,15 @@
 
 /* img-gallery section css end */
 
-@media only screen and (max-width: 992px) {
-
-    /* img-gallery section css start */
-    .img-gallery-wrapper {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    /* img-gallery section css end */
-}
-
 @media only screen and (max-width: 767px) {
 
     /* img-gallery section css start */
     .img-gallery-wrapper {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .img-gallery-item:last-child {
+        display: none;
     }
 
     /* img-gallery section css end */

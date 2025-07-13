@@ -268,6 +268,41 @@ var swiper = new Swiper(".category-slider", {
 });
 // category-sliderr js end--
 
+// categoryg-slider2 js start--
+var swiper = new Swiper(".category-slider2", {
+	slidesPerView: 4,
+	spaceBetween: 20,
+	grabCursor: true,
+	loop: false,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		// when window width is >= 320px
+		1: {
+			spaceBetween: 20,
+			slidesPerView: 2.5,
+		},
+		// when window width is >= 576px
+		576: {
+			spaceBetween: 20,
+			slidesPerView: 3.5,
+		},
+		// when window width is >= 767px
+		768: {
+			spaceBetween: 20,
+			slidesPerView: 3,
+		},
+		// when window width is >= 993px
+		993: {
+			spaceBetween: 20,
+			slidesPerView: 4,
+		}
+	}
+});
+// category-slider2 js end--
+
 // img-with-card-slider js start--
 var swiper = new Swiper(".img-with-card-slider", {
 	slidesPerView: 2.3,

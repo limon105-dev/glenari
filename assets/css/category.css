@@ -63,7 +63,20 @@
 .category-item:hover .category-item-content-title {
     color: var(--brand-color);
 }
+
 /* category section css end */
+
+
+@media only screen and (max-width: 767px) {
+
+    /* category section css start */
+
+    .category-slider-area {
+        margin: 0 -20px 0 0;
+    }
+
+    /* category section css end */
+}
 
 @media only screen and (max-width: 575px) {
 
@@ -80,5 +93,6 @@
     .category-item-content-title {
         font-size: 12px;
     }
+
     /* category section css end */
 }
