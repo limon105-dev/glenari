@@ -194,12 +194,6 @@ $(function () {
 });
 // btn js ---
 
-// video player js start....
-new VenoBox({
-	selector: '.video-play-btn',
-});
-// video player js end....
-
 // topbar slider js start--
 var swiper = new Swiper(".top-bar-slider", {
 	slidesPerView: 1,
@@ -421,42 +415,42 @@ var swiper = new Swiper(".testimonial-slider", {
 // testimonial slider js end--
 
 // product-slider js start---
-// var swiper = new Swiper(".product-slider-thumb", {
-// 	loop: true,
-// 	spaceBetween: 20,
-// 	slidesPerView: 5,
-// 	freeMode: true,
-// 	mousewheel: true,
-// 	breakpoints: {
-// 		// when window width is >= 320px
-// 		1: {
-// 			spaceBetween: 10,
-// 			slidesPerView: 4,
-// 		},
-// 		// when window width is >= 576px
-// 		576: {
-// 			spaceBetween: 20,
-// 			slidesPerView: 5,
-// 		},
-// 		// when window width is >= 767px
-// 		768: {
-// 			spaceBetween: 20,
-// 			slidesPerView: 5,
-// 		}
-// 	}
-// });
-// var swiper2 = new Swiper(".product-slider", {
-// 	loop: true,
-// 	autoHeight: true,
-// 	spaceBetween: 10,
-// 	navigation: {
-// 		nextEl: ".swiper-button-next",
-// 		prevEl: ".swiper-button-prev",
-// 	},
-// 	thumbs: {
-// 		swiper: swiper,
-// 	},
-// });
+var swiper = new Swiper(".product-slider-thumb", {
+	loop: true,
+	spaceBetween: 20,
+	slidesPerView: 5,
+	freeMode: true,
+	mousewheel: true,
+	breakpoints: {
+		// when window width is >= 320px
+		1: {
+			spaceBetween: 10,
+			slidesPerView: 4,
+		},
+		// when window width is >= 576px
+		576: {
+			spaceBetween: 20,
+			slidesPerView: 5,
+		},
+		// when window width is >= 767px
+		768: {
+			spaceBetween: 20,
+			slidesPerView: 5,
+		}
+	}
+});
+var swiper2 = new Swiper(".product-slider", {
+	loop: true,
+	autoHeight: true,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	thumbs: {
+		swiper: swiper,
+	},
+});
 // product-slider js end---
 
 // side-cart-slider js start--
@@ -480,3 +474,9 @@ var swiper = new Swiper(".testimonial-slider", {
 // 	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
 // })
 // progesss-bar js end--
+
+// video player js start....
+new VenoBox({
+	selector: '.video-play-btn',
+});
+// video player js end....

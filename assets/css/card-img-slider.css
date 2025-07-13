@@ -19,6 +19,7 @@
     .card-img-slider-section .section-heading-wrapper {
         justify-content: center;
         gap: 8px;
+        flex-direction: column;
     }
 
     /* card-img slider section css end */

@@ -1,6 +1,7 @@
 /* product section css start */
 .product-breadcrumb {
-    padding: 30px 0;
+    padding: 20px 0;
+    background-color: var(--white);
 }
 
 .product-breadcrumb .breadcrumb {
@@ -21,7 +22,7 @@
 }
 
 .section.product-section {
-    padding-top: 0;
+    padding-top: 20px;
 }
 
 .product-page-content-wrap {
