@@ -1,8 +1,11 @@
 /* video-slider section css start */
-.video-slider-item .video-thumb {
-    overflow: hidden;
-    position: relative;
+.swiper.video-slider .swiper-slide {
     border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-slider-item .video-thumb {
+    position: relative;
 }
 
 .video-slider-item .video-thumb .video-play-btn {

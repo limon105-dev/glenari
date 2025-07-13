@@ -343,51 +343,55 @@ var swiper = new Swiper(".card-img-slide", {
 var swiper = new Swiper(".video-slider", {
 	slidesPerView: 5,
 	spaceBetween: 20,
+	loop: true,
 	grabCursor: true,
-	loop: false,
 	centeredSlides: true,
-	on: {
-		setTranslate: function () {
-			const slides = this.slides;
-			for (let i = 0; i < slides.length; i++) {
-				const slide = slides[i];
-				const slideEl = slide;
-				const slideIndex = slideEl.getAttribute("data-swiper-slide-index");
-				slideEl.style.transform = "scale(0.85)";
-				slideEl.style.transition = "transform 0.4s ease";
-			}
-			if (this.slides[this.activeIndex]) {
-				this.slides[this.activeIndex].style.transform = "scale(1.1)";
-			}
-		},
-	},
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
 	breakpoints: {
-		// when window width is >= 1px
 		1: {
 			spaceBetween: 10,
 			slidesPerView: 2,
 		},
-		// when window width is >= 430px
 		576: {
 			spaceBetween: 20,
 			slidesPerView: 2.5,
 		},
-		// when window width is >= 767px
 		768: {
 			spaceBetween: 20,
 			slidesPerView: 3.4,
 		},
-		// when window width is >= 767px
 		993: {
 			spaceBetween: 20,
 			slidesPerView: 5,
 		}
+	},
+	on: {
+		init: function () {
+			scaleSlides(this);
+		},
+		slideChangeTransitionStart: function () {
+			scaleSlides(this);
+		},
+		setTranslate: function () {
+			scaleSlides(this);
+		}
 	}
 });
+
+function scaleSlides(swiper) {
+	swiper.slides.forEach((slide, index) => {
+		slide.style.transition = "transform 0.4s ease";
+		slide.style.transform = "scale(0.85)";
+	});
+
+	const activeSlide = swiper.slides[swiper.activeIndex];
+	if (activeSlide) {
+		activeSlide.style.transform = "scale(1.1)";
+	}
+}
 // video-slider js end--
 
 // product-slider js start---

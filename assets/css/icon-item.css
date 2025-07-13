@@ -49,6 +49,10 @@
         gap: 10px;
     }
 
+    .icon-item::before {
+        right: -2%;
+    }
+
     /* icon-item section css end */
 }
 
@@ -58,6 +62,10 @@
     .icon-items {
         gap: 10px;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .icon-item::before {
+        display: none;
     }
 
     .icon-item-img {
