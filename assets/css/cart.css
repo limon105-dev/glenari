@@ -133,7 +133,6 @@
     border: 1px solid var(--border-color);
     display: inline-flex;
     align-items: center;
-    border-radius: 4px;
 }
 
 .quantity-decrease,
