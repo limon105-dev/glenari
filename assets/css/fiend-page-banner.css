@@ -1,0 +1,64 @@
+/* find page banner css start */
+.find-page-banner-section {
+    background-color: var(--brand-color2);
+    position: relative;
+}
+
+.find-page-banner-shape {
+    position: absolute;
+    left: 0;
+    bottom: -1vw;
+    width: 100%;
+}
+
+.find-page-banner-shape svg {
+    width: 100%;
+    height: auto;
+}
+
+.find-page-banner-content {
+    padding: 150px 0 250px;
+    text-align: center;
+}
+
+.find-page-banner-content-title {
+    text-transform: capitalize;
+}
+
+/* find page banner css end */
+
+@media only screen and (max-width: 992px) {
+
+    /* find page banner css start */
+    .find-page-banner-content {
+        padding: 100px 0 150px;
+    }
+
+    /* find page banner css end */
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* find page banner css start */
+    .find-page-banner-content {
+        padding: 50px 0 80px;
+        text-align: center;
+    }
+
+    /* find page banner css end */
+}
+
+@media only screen and (max-width: 575px) {
+
+    /* find page banner css start */
+    .find-page-banner-content {
+        padding: 50px 0 60px;
+        text-align: center;
+    }
+
+    .find-page-banner-shape {
+        bottom: -2vw;
+    }
+
+    /* find page banner css end */
+}

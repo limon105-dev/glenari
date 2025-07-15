@@ -1,0 +1,59 @@
+/* find-store section css start */
+.find-store-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: center;
+}
+
+.find-store-content-title {
+    text-transform: capitalize;
+}
+
+.find-store-content-text {
+    margin: 20px 0 0 0;
+    max-width: 500px;
+}
+
+.find-store-content-list {
+    margin: 20px 0 0 0;
+}
+
+.find-store-content-list li {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 10px 0;
+}
+
+.find-store-content-list li:last-child {
+    margin: 0;
+}
+
+.find-store-content-list li a {
+    color: var(--paragraph-text-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.find-store-content-list li a:hover {
+    text-decoration: underline;
+}
+
+
+.find-store-location iframe {
+    border: 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* find-store section css end */
+
+@media only screen and (max-width: 767px) {
+
+    /* find-store section css end */
+    .find-store-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* find-store section css end */
+}
