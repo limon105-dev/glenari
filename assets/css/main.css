@@ -671,7 +671,7 @@ button {
     padding: 0 0 5px 0;
 }
 
-.side-cart-progress-bar-text strong{
+.side-cart-progress-bar-text strong {
     color: var(--brand-color);
 }
 
@@ -2030,6 +2030,19 @@ button {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media only screen and (max-width: 1499px) {
+
+    /* navbar css start */
+    .megamenu-wrapper {
+        overflow-y: auto;
+        height: 500px;
+        scrollbar-width: thin;
+        padding: 0 0 24px 0;
+    }
+
+    /* navbar css end */
 }
 
 /* footer-section css end */
