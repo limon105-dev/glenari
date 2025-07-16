@@ -81,7 +81,7 @@
 }
 
 .cart-product-img {
-    width: 30%;
+    width: 40%;
     display: block;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -89,7 +89,7 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     overflow: hidden;
-    max-height: 150px;
+    height: 180px;
     background-color: var(--card-bg);
 }
 
@@ -106,6 +106,12 @@
     text-transform: capitalize;
 }
 
+.cart-product-text {
+    margin: 8px 0 0 0;
+    font-size: 12px;
+    line-height: 16px;
+}
+
 .cart-product-varient {
     margin: 10px 0 0 0;
     display: flex;
@@ -117,7 +123,7 @@
 .cart-product-varient span {
     color: var(--paragraph-text-color);
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--paragraph-font);
     line-height: 1;
     text-transform: capitalize;
@@ -141,10 +147,16 @@
     margin: 0;
     cursor: pointer;
     background-color: transparent;
-    color: var(--btn-bg);
+    color: var(--black);
     height: 100%;
     padding: 10px 10px;
     transition: ease .3s;
+}
+
+.quantity-decrease:hover,
+.quantity-increase:hover {
+    background-color: var(--hover-color);
+    color: var(--white);
 }
 
 .quantity-decrease {
@@ -283,16 +295,20 @@
 @media only screen and (max-width:767px) {
 
     /* cart section css start */
-    .cart-product-varient {
-        margin: 5px 0 0 0;
+    .cart-product-table tbody tr td:first-child {
+        width: 55%;
+    }
+
+    .cart-product-table tbody tr td:last-child {
+        width: 15%;
+    }
+
+    .cart-product-quantity-wrap {
+        gap: 20px;
     }
 
     .cart-product-varient {
         flex-direction: row;
-    }
-
-    .cart-product-img {
-        height: 130px;
     }
 
     /* cart section css end */
@@ -306,7 +322,6 @@
     }
 
     .cart-product-table thead tr th:nth-child(2) {
-        width: 30%;
         display: none;
     }
 
@@ -315,11 +330,7 @@
     }
 
     .cart-product-table tbody tr td:first-child {
-        width: 75%;
-    }
-
-    .cart-product-table tbody tr td:last-child {
-        width: 30%;
+        width: 85%;
     }
 
     .cart-product-table tbody tr td {
@@ -334,16 +345,8 @@
         font-size: 14px;
     }
 
-    .cart-product-varient span {
-        font-weight: 400;
-    }
-
     .cart-product-img {
         width: 40%;
-    }
-
-    .cart-product-price p {
-        font-weight: 500;
     }
 
     .order-summary-table td,
@@ -355,6 +358,15 @@
         font-size: 16px;
         padding: 0 0 15px 0;
         margin: 0 0 5px 0;
+    }
+
+    .cart-product-varient {
+        margin: 8px 0 0 0;
+    }
+
+    .cart-product-text {
+        font-size: 11px;
+        line-height: 14px;
     }
 
     /* cart section css end */

@@ -127,31 +127,6 @@ $(document).ready(function () {
 		$(this).parent().siblings().removeClass('active').find('.product-accordion-item-content').slideUp();
 	});
 	// **..product-accordion js end..**
-
-	// **..faq-accordion js start..**
-	$('.faq-accordion-toggle-btn').on('click', function () {
-		$(this).next().slideToggle();
-		$(this).parent().toggleClass('active');
-		$(this).parent().siblings().removeClass('active').find('.faq-accordion-item-content').slideUp();
-	});
-	// **..faq-accordion js end..**
-
-	// --tab js start--
-	$('.tab-nav-item:first-child').addClass('active');
-	$('.desktop-tab-content-item').hide();
-	$('.desktop-tab-content-item:first').show();
-
-	$('.desktop-tabs-nav-item-link').click(function () {
-		$('.tab-nav-item').removeClass('active');
-		$(this).parent().addClass('active');
-		$('.desktop-tab-content-item').hide();
-
-		var activeTab = $(this).attr('href');
-		$(activeTab).fadeIn();
-		return false;
-	});
-	// --tab js end--
-
 })
 
 // btn js ---
@@ -220,10 +195,6 @@ var swiper = new Swiper(".hero-slider", {
 	grabCursor: true,
 	loop: true,
 	speed: 1000,
-	// autoplay: {
-	// 	delay: 3500,
-	// 	disableOnInteraction: false,
-	// },
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
@@ -462,25 +433,25 @@ var swiper2 = new Swiper(".product-slider", {
 // product-slider js end---
 
 // side-cart-slider js start--
-// var swiper = new Swiper(".side-cart-slider", {
-// 	slidesPerView: 2.2,
-// 	spaceBetween: 10,
-// 	grabCursor: true,
-// 	loop: false,
-// 	speed: 1000,
-// 	pagination: {
-// 		el: ".swiper-pagination",
-// 		clickable: true,
-// 	}
-// });
+var swiper = new Swiper(".side-cart-slider", {
+	slidesPerView: 2.2,
+	spaceBetween: 10,
+	grabCursor: true,
+	loop: false,
+	speed: 1000,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	}
+});
 // side-cart-slider js end--
 
 // progesss-bar js start--
-// const progress = document.querySelector('.progress');
-// progress.addEventListener('input', function () {
-// 	const value = this.value;
-// 	this.style.background = `linear-gradient(to right,rgb(36, 40, 51) 0%,rgb(36, 40, 51) ${value}%,rgb(216, 216, 216) ${value}%)`
-// })
+const progress = document.querySelector('.progress');
+progress.addEventListener('input', function () {
+	const value = this.value;
+	this.style.background = `linear-gradient(to right,rgb(133 168 104) 0%,rgb(133 168 104) ${value}%,rgb(216, 216, 216) ${value}%)`
+})
 // progesss-bar js end--
 
 // video player js start....
