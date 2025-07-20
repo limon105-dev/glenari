@@ -1,6 +1,6 @@
 /* find page banner css start */
 .find-page-banner-section {
-    background-color: var(--brand-color2);
+    background-color: var(--brand-color);
     position: relative;
 }
 
@@ -23,6 +23,7 @@
 
 .find-page-banner-content-title {
     text-transform: capitalize;
+    color: var(--white);
 }
 
 /* find page banner css end */

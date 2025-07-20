@@ -14,8 +14,22 @@
     transition: all ease 3s;
 }
 
+.collection-section.energy-collection-section .collection-wrapper .collection-filter {
+    top: 190px;
+}
+
 .collection-content {
     width: 72%;
+}
+
+.collection-section.bundle-collection-section .collection-wrapper .collection-content,
+.collection-section.green-collection-section .collection-wrapper .collection-content {
+    width: 100%;
+}
+
+.collection-section.bundle-collection-section .collection-wrapper .collection-content .product-items,
+.collection-section.green-collection-section .collection-wrapper .collection-content .product-items {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .collection-top {
@@ -45,6 +59,36 @@
     background-color: var(--brand-color);
     cursor: pointer;
     border-radius: 5px;
+}
+
+.collection-tags {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: sticky;
+    top: 158px;
+    left: 0;
+    height: fit-content;
+    background: #faf5f5;
+    z-index: 2;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.collection-tags .btn {
+    border: 1px solid var(--brand-color);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.collection-tags .btn.active {
+    background-color: var(--brand-color);
+    color: var(--white);
 }
 
 /* collection filter css start */
@@ -323,6 +367,15 @@
 @media only screen and (max-width: 992px) {
 
     /* colection section css start */
+    .collection-tags {
+        top: 86px;
+        justify-content: flex-start;
+    }
+
+    .collection-section.energy-collection-section .collection-wrapper .collection-filter {
+        top: 0;
+    }
+
     .filter-box {
         padding: 20px;
     }
@@ -381,6 +434,11 @@
         width: 100%;
     }
 
+    .collection-section.bundle-collection-section .collection-wrapper .collection-content .product-items,
+    .collection-section.green-collection-section .collection-wrapper .collection-content .product-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .filter-sidebar-heading {
         display: none;
     }
@@ -399,6 +457,10 @@
 @media only screen and (max-width: 767px) {
 
     /* colection section css start */
+    .collection-tags {
+        gap: 10px;
+    }
+
     .product-items {
         column-gap: 16px;
         row-gap: 24px;
@@ -410,7 +472,16 @@
 @media only screen and (max-width: 575px) {
 
     /* colection section css start */
+    .collection-tags {
+        top: 67px;
+    }
+
     .product-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collection-section.bundle-collection-section .collection-wrapper .collection-content .product-items,
+    .collection-section.green-collection-section .collection-wrapper .collection-content .product-items {
         grid-template-columns: repeat(2, 1fr);
     }
 

@@ -1,0 +1,34 @@
+/* common page banner css start */
+.common-page-banner-section {
+    padding: 50px 0;
+    background-color: var(--brand-color);
+}
+
+.common-page-banner-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.common-page-banner-content {
+    text-align: center;
+    margin: 0 0 0 auto;
+}
+
+.common-page-banner-title {
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+/* common page banner css end */
+
+@media only screen and (max-width: 575px) {
+
+    /* common page banner css start */
+.common-page-banner-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+}
+    /* common page banner css end */
+
+}

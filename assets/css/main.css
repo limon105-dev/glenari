@@ -274,6 +274,7 @@ button {
     z-index: 1;
     text-decoration: none;
     cursor: pointer;
+    text-wrap-mode: nowrap;
 }
 
 .btn:hover {
