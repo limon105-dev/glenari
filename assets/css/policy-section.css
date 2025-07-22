@@ -1,13 +1,13 @@
-/* article-section css start */
-.article-section .section-heading-wrapper {
+/* policy-section css start */
+.policy-section .section-heading-wrapper {
     text-align: center;
 }
 
-.article-section .section-heading {
+.policy-section .section-heading {
     color: var(--black);
 }
 
-.article-content-wrapper {
+.policy-content-wrapper {
     padding: 20px 15px;
     border: 1px solid var(--border-color);
     max-width: 850px;
@@ -16,37 +16,37 @@
     border-radius: 10px;
 }
 
-.article-content {
+.policy-content {
     margin: 0 0 15px 0;
 }
 
-.article-content:last-child {
+.policy-content:last-child {
     margin: 0;
 }
 
-.article-content p,
-.article-content strong {
+.policy-content p,
+.policy-content strong {
     font-size: 14px;
     margin: 0 0 5px 0;
 }
 
-.article-content p:last-child {
+.policy-content p:last-child {
     margin: 0;
 }
 
-.article-content strong {
+.policy-content strong {
     display: block;
 }
 
-.article-content ul li{
+.policy-content ul li{
     margin: 0 0 5px 0;
 }
 
-.article-content ul li:last-child{
+.policy-content ul li:last-child{
     margin: 0;
 }
 
-.article-content.privacy-policy-item {
+.policy-content.privacy-policy-item {
     text-align: center;
 }
 
@@ -60,12 +60,12 @@
     margin: 50px auto 0;
 }
 
-/* article-section css end */
+/* policy-section css end */
 
 @media only screen and (max-width: 575px) {
 
-    /* article-section css start */
-    .article-content-wrapper {
+    /* policy-section css start */
+    .policy-content-wrapper {
         padding: 15px 15px;
     }
 
@@ -77,5 +77,5 @@
         margin: 20px auto 0;
     }
 
-    /* article-section css end */
+    /* policy-section css end */
 }
