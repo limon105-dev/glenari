@@ -230,7 +230,7 @@ select {
 input::placeholder,
 textarea::placeholder,
 select::placeholder {
-    color: var(--paragraph-text-color);
+    color: var(--text-muted);
 }
 
 input::-webkit-outer-spin-button,
@@ -726,49 +726,16 @@ button {
     scrollbar-width: thin;
 }
 
-.side-cart-product-item-wrapper .cart-product-details {
-    gap: 10px;
-}
-
-.side-cart-product-item-wrapper .cart-product-table tbody tr:first-child td {
-    padding-top: 0;
-}
-
-.side-cart-product-item-wrapper .cart-product-table tbody tr td:first-child {
-    width: 85%;
-}
-
-.side-cart-product-item-wrapper .cart-product-table tbody tr td:last-child {
-    width: 15%;
-}
-
-.side-cart-product-item-wrapper .cart-product-table tbody tr td {
-    padding: 10px 5px 10px 0;
-}
-
-.side-cart-product-item-wrapper .cart-product-quantity-wrap.mobile-cart-quantity {
-    display: flex;
-}
-
-.side-cart-product-item-wrapper .cart-product-varient span {
-    font-size: 12px;
+.side-cart-product-item-wrapper .cart-product-items {
+    margin: 0;
 }
 
 .side-cart-product-item-wrapper .cart-product-img {
-    width: 40%;
+    width: 30%;
 }
 
-.side-cart-product-item-wrapper .cart-product-varient {
-    margin: 8px 0 0 0;
-}
-
-.side-cart-product-item-wrapper .cart-product-title {
-    font-size: 14px;
-}
-
-.side-cart-product-item-wrapper .cart-product-img {
-    border-radius: 5px;
-    overflow: hidden;
+.side-cart-product-item-wrapper .cart-product-content {
+    width: 68%;
 }
 
 .side-cart-product-content-footer {
@@ -2355,24 +2322,8 @@ button {
         font-size: 20px;
     }
 
-    .side-cart-product-item-wrapper .cart-product-table tbody tr td:nth-child(2) {
-        display: table-cell;
-    }
-
-    .side-cart-product-item-wrapper .cart-product-img {
-        width: 42%;
-    }
-
-    .side-cart-product-item-wrapper .cart-product-content {
-        width: 57%;
-    }
-
     .side-cart-product-item-wrapper {
         padding: 15px;
-    }
-
-    .side-cart-product-item-wrapper .cart-product-table tbody tr td:first-child {
-        width: 78%;
     }
 
     .side-cart-progress-bar-area {
