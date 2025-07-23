@@ -17,7 +17,7 @@
     width: 40%;
     background-color: var(--section-bg);
     border: 1px solid var(--border-color);
-    padding: 50px;
+    padding: 40px 50px;
     border-radius: 8px;
     height: fit-content;
     position: sticky;
